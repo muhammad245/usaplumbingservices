@@ -14,7 +14,7 @@ export const NAV_LINKS = [
 export const VALUE_PROPS = [
   '24/7 Emergency Service',
   'No Hidden Charges',
-  'Insured, Certified & Bonded',
+  'Certified and Bonded',
 ]
 
 export const SERVICES = [
