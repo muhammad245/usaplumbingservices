@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --color-brand-red: #d62828;
+  --color-brand-red-dark: #8c1414;
+  --color-brand-navy: #1e3a8a;
+  --color-brand-charcoal: #1f2937;
+  --color-brand-gold: #facc15;
+  --color-brand-light: #f3f4f6;
+  --font-heading: Anton, sans-serif;
+  --font-body: Inter, sans-serif;
+}
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply m-0 bg-white font-body text-gray-900 antialiased;
+  }
+
+  a {
+    @apply transition-colors;
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-heading {
+    @apply mb-10 text-center md:mb-14;
+  }
+
+  .section-label {
+    @apply mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-brand-red;
+  }
+
+  .section-title {
+    @apply font-heading text-4xl tracking-wide text-brand-charcoal md:text-5xl;
+  }
+
+  .input-field {
+    @apply w-full rounded-md border border-white/20 bg-white/10 px-4 py-3 text-white placeholder:text-white/40 focus:border-brand-red focus:outline-none;
+  }
+}
