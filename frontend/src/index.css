@@ -50,4 +50,122 @@
   .input-field {
     @apply w-full rounded-md border border-white/20 bg-white/10 px-4 py-3 text-white placeholder:text-white/40 focus:border-brand-red focus:outline-none;
   }
+
+  .gradient-hero {
+    background-image:
+      radial-gradient(circle at 15% 20%, rgba(250, 204, 21, 0.15), transparent 45%),
+      radial-gradient(circle at 82% 10%, rgba(214, 40, 40, 0.18), transparent 40%),
+      linear-gradient(140deg, #1f2937 0%, #152449 55%, #1e3a8a 100%);
+  }
+
+  .glass-card {
+    @apply rounded-2xl border border-white/10 bg-white/8 shadow-[0_18px_55px_rgba(0,0,0,0.24)] backdrop-blur-sm;
+  }
+
+  .shimmer-text {
+    background-image: linear-gradient(90deg, #facc15, #fff3be 45%, #facc15 80%);
+    background-size: 200% auto;
+    background-clip: text;
+    color: transparent;
+    animation: shimmer 6s linear infinite;
+  }
+
+  .btn-glow {
+    box-shadow: 0 10px 30px rgba(214, 40, 40, 0.35);
+  }
+
+  .reveal-up {
+    animation: revealUp 0.85s var(--ease-out-expo) both;
+  }
+
+  .reveal-soft {
+    animation: revealSoft 1s ease both;
+  }
+
+  .float-slow {
+    animation: floatY 4.5s ease-in-out infinite;
+  }
+
+  .pulse-soft {
+    animation: pulseSoft 3s ease-in-out infinite;
+  }
+
+  .card-hover {
+    transition:
+      transform 280ms ease,
+      box-shadow 280ms ease,
+      border-color 280ms ease,
+      background-color 280ms ease;
+  }
+
+  .card-hover:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 20px 45px rgba(30, 58, 138, 0.14);
+    border-color: rgba(30, 58, 138, 0.22);
+  }
+}
+
+:root {
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes revealUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 30px, 0) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes revealSoft {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 16px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+@keyframes floatY {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulseSoft {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(250, 204, 21, 0.35);
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgba(250, 204, 21, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
 }

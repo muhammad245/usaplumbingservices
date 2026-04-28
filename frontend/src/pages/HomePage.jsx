@@ -20,11 +20,11 @@ function HomePage() {
       <main>
         <Suspense fallback={<SkeletonPage />}>
           <HeroSection />
-          <div className="h-1 bg-brand-red" />
+          <div className="h-1 bg-gradient-to-r from-brand-red via-brand-gold to-brand-red" />
           <ServicesSection />
-          <div className="h-1 bg-brand-red" />
+          <div className="h-1 bg-gradient-to-r from-brand-red via-brand-gold to-brand-red" />
           <TestimonialsSection />
-          <div className="h-1 bg-brand-gold" />
+          <div className="h-1 bg-gradient-to-r from-brand-gold via-brand-red to-brand-gold" />
           <ContactSection />
         </Suspense>
       </main>

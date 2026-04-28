@@ -40,13 +40,13 @@ function ContactSection() {
   }
 
   return (
-    <section id="contact" className="bg-brand-charcoal py-20">
+    <section id="contact" className="gradient-hero py-20">
       <div className="container-x max-w-2xl">
-        <div className="section-heading">
+        <div className="section-heading reveal-soft">
           <p className="section-label">Get In Touch</p>
-          <h2 className="section-title text-white">CONTACT US</h2>
+          <h2 className="section-title text-white shimmer-text">CONTACT US</h2>
         </div>
-        <form className="space-y-5" onSubmit={handleSubmit(onSubmit)} noValidate>
+        <form className="glass-card reveal-up space-y-5 p-6 md:p-8" onSubmit={handleSubmit(onSubmit)} noValidate>
           <Field label="Name" error={errors.name?.message}>
             <input className="input-field" type="text" placeholder="Your full name" autoComplete="name" {...register('name')} />
           </Field>
@@ -73,7 +73,7 @@ function ContactSection() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full rounded-md bg-brand-red px-5 py-4 font-heading text-lg uppercase tracking-wider text-white hover:bg-brand-red-dark disabled:cursor-not-allowed disabled:opacity-70"
+            className="btn-glow w-full rounded-md bg-brand-red px-5 py-4 font-heading text-lg uppercase tracking-wider text-white transition-all duration-300 hover:-translate-y-1 hover:bg-brand-red-dark disabled:cursor-not-allowed disabled:opacity-70"
           >
             {isSubmitting ? 'Submitting...' : 'Send My Request'}
           </button>
