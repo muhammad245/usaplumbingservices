@@ -29,7 +29,7 @@ export const SERVICES = [
     name: 'Pipe Repair',
     headline: "A leaking pipe won't wait - and neither do we.",
     support:
-      "Whether it's a small drip or a burst line, we find it fast and fix it right the first time - water, sewer, or gas.",
+      "Whether it's a small drip or a burst line, we find it fast and fix it right the first time.",
     features: ['Expert leak detection', 'Water, sewer & gas pipes', 'Best price guaranteed'],
   },
   {
@@ -43,7 +43,7 @@ export const SERVICES = [
     name: 'Backflow Prevention',
     headline: 'The water coming out of your tap should only ever be clean.',
     support:
-      "Contaminated water mixing into your supply is a silent risk most homeowners don't think about - until it's too late.",
+      "Contaminated water mixing into your supply is a silent risk most homeowners don't think about it, until it's too late.",
     features: ['All devices installed & serviced', 'Local code compliant', 'Peace of mind guaranteed'],
   },
 ]

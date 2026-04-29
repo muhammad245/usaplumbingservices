@@ -54,7 +54,7 @@ function ContactSection() {
             <input className="input-field" type="tel" placeholder="(555) 000-0000" autoComplete="tel" {...register('phone')} />
           </Field>
           <Field label="Service" error={errors.service?.message}>
-            <select className="input-field" {...register('service')}>
+            <select className="input-field select-service-field" {...register('service')}>
               <option value="">Select a service...</option>
               <option value="drain">Drain Cleaning</option>
               <option value="pipe">Pipe Repair</option>
