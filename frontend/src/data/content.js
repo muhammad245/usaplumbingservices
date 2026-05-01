@@ -29,7 +29,7 @@ export const SERVICES = [
     name: 'Pipe Repair',
     headline: "A leaking pipe won't wait - and neither do we.",
     support:
-      "Whether it's a small drip or a burst line, we find it fast and fix it right the first time.",
+      "Whether it's a small drip or a burst line we find it quickly and fix it right the very first time always.",
     features: ['Expert leak detection', 'Water, sewer & gas pipes', 'Best price guaranteed'],
   },
   {

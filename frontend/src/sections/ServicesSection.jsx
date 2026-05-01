@@ -13,7 +13,6 @@ function ServicesSection() {
     <section id="services" className="bg-brand-light py-20">
       <div className="container-x">
         <div className="section-heading reveal-soft">
-          <p className="section-label text-2xl md:text-3xl">What We Do</p>
           <h2 className="section-title text-brand-red">Our Services</h2>
         </div>
 
@@ -27,9 +26,21 @@ function ServicesSection() {
               className="card-hover reveal-up flex flex-col rounded-xl border border-gray-200 bg-white p-6 shadow-sm"
               style={{ animationDelay: `${index * 90}ms` }}
             >
-              <h3 className="pulse-soft mb-4 inline-flex items-center gap-2 rounded-lg bg-brand-red px-4 py-3 font-heading text-3xl leading-none text-white md:text-4xl">
-                <ServiceIcon className="h-7 w-7 md:h-8 md:w-8" strokeWidth={2.5} aria-hidden="true" />
-                <span>{service.name}</span>
+              <h3 className="pulse-soft mb-4 flex min-h-[88px] w-full items-center gap-3 rounded-lg bg-brand-red px-4 py-3 font-heading text-2xl leading-tight text-white md:min-h-[96px] md:text-3xl">
+                <span className="grid h-10 w-10 shrink-0 place-items-center rounded-md bg-white/15 md:h-11 md:w-11">
+                  <ServiceIcon className="h-6 w-6 md:h-7 md:w-7" strokeWidth={2.5} aria-hidden="true" />
+                </span>
+                <span className="block">
+                  {service.name === 'Pipe Repair' ? (
+                    <>
+                      Pipe
+                      <br />
+                      Repair
+                    </>
+                  ) : (
+                    service.name
+                  )}
+                </span>
               </h3>
               <p className="mb-5 text-sm leading-6 text-gray-500">{service.support}</p>
               <ul className="mt-auto space-y-2 border-t border-gray-100 pt-4">

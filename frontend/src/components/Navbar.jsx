@@ -4,8 +4,8 @@ function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-brand-navy/90 shadow-lg backdrop-blur-sm reveal-soft">
       <nav className="container-x flex h-[72px] items-center justify-between">
-        <a href="#home" className="group flex items-center gap-3 text-white" aria-label={COMPANY.name}>
-          <span className="grid h-11 w-11 place-items-center rounded-md bg-brand-red transition-transform duration-300 group-hover:rotate-6 group-hover:scale-105">
+        <a href="#home" className="group flex shrink-0 items-center gap-3 text-white" aria-label={COMPANY.name}>
+          <span className="grid h-10 w-10 shrink-0 place-items-center rounded-md bg-brand-red transition-transform duration-300 group-hover:rotate-6 group-hover:scale-105 sm:h-11 sm:w-11">
             <span className="h-4 w-4 rounded-full border-2 border-white" />
           </span>
           <span className="font-heading text-lg leading-none tracking-wider">
