@@ -2,13 +2,15 @@ import { COMPANY, VALUE_PROPS } from '../data/content'
 
 function HeroSection() {
   return (
-    <section id="home" className="gradient-hero scroll-mt-24 py-20 text-center">
+    <section id="home" className="hero-truck-bg scroll-mt-24 py-20 text-center">
       <div className="container-x">
-        <p className="reveal-up mb-4 text-xs font-semibold uppercase tracking-[0.14em] text-brand-red">Trusted Since 1999</p>
-        <h1 className="reveal-up mb-5 font-heading text-5xl leading-tight tracking-wide text-white md:text-7xl" style={{ animationDelay: '90ms' }}>
-          USA Plumbing
-          <br />
-          Service Inc.
+        <h1 className="reveal-up mb-5 flex flex-col items-center" style={{ animationDelay: '90ms' }}>
+          <img
+            src="/logo.png"
+            alt="USA Plumbing Service Inc., trusted since 1999"
+            className="h-auto w-full max-w-[min(100%,420px)] object-contain drop-shadow-[0_14px_45px_rgba(0,0,0,0.4)] md:max-w-lg"
+            decoding="async"
+          />
         </h1>
         <p className="reveal-up mx-auto mb-8 max-w-2xl text-base text-white/80 md:text-xl" style={{ animationDelay: '170ms' }}>
           {COMPANY.areas}
